@@ -6,7 +6,7 @@ include('dbconfig.php');
     // $db = new Databases('localhost', 'deafdb' , 'root' , '');
 try{
     $content =array();
-    $dbh = new PDO('mysql:host=localhost;dbname=deafdb', $user, $pass);
+    $dbh = new PDO('mysql:host=localhost;dbname=proficnx_deafdb', $user, $pass);
     foreach($dbh->query('SELECT * from contents') as $row) {
         array_push($content, array(
                 'id' => $row['id'],
